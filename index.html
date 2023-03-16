@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dark mode</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .dark{
+            background: #020118;
+            height: 100vh;
+            width: 100vw;
+        }
+
+    </style>
+</head> 
+
+<body>
+
+
+    <div class="container">
+        <h1>
+            Dark Mode
+        </h1>
+
+        <button onclick="switchmode()">
+            Clique aqui
+        </button>
+
+    </div>
+
+    <script>
+        function switchmode(){
+        // criar função darkmode
+        // pegar o container da pagina
+        // criar botao troca de tema
+        const container= document.querySelector(".container");
+        const h1= document.querySelector("h1");
+        console.log(container.classList.contains("dark")) 
+        // validar a classe atual do container
+        if(container.classList.contains("dark")) {
+            container.classList.remove("dark")
+            h1.style.color="black"
+        } else{
+            // adicionar flag dark no container
+        container.classList.add("dark");
+        h1.style.color="white"   
+        }
+
+        // alterar a cor dos elementos
+    console.log('bom dia')
+
+        }
+        
+    </script>
+</body>
+</html>
